@@ -68,6 +68,9 @@
                                                 <rect key="frame" x="320.33333333333331" y="0.0" width="44" height="28.666666666666668"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="doc.on.doc.fill" catalog="system" buttonSize="mini"/>
+                                                <connections>
+                                                    <action selector="btcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l1m-5D-6Xw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -90,6 +93,9 @@
                                                 <rect key="frame" x="325.33333333333337" y="0.0" width="44" height="28.666666666666668"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="doc.on.doc.fill" catalog="system" buttonSize="mini"/>
+                                                <connections>
+                                                    <action selector="ethButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HtG-jq-PsB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -112,6 +118,9 @@
                                                 <rect key="frame" x="321.33333333333337" y="0.0" width="44" height="43"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="doc.on.doc.fill" catalog="system" buttonSize="mini"/>
+                                                <connections>
+                                                    <action selector="adaButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wb2-1K-oZI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -134,6 +143,9 @@
                                                 <rect key="frame" x="323.66666666666669" y="0.0" width="44" height="28.666666666666668"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="doc.on.doc.fill" catalog="system" buttonSize="mini"/>
+                                                <connections>
+                                                    <action selector="dogeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xc1-QQ-w4P"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -163,7 +175,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="POK-7B-rPK"/>
                     <connections>
+                        <outlet property="adaAddressOutlet" destination="bYy-Wd-gEB" id="gIi-TL-nd7"/>
+                        <outlet property="btcAddressOutlet" destination="4eD-NV-fmg" id="fqN-uz-nhu"/>
                         <outlet property="decryptoLabelOutlet" destination="QC0-Sx-LsT" id="gfc-eQ-CwI"/>
+                        <outlet property="dogeAddressOutlet" destination="tty-ZJ-fpy" id="tDe-Hz-hFx"/>
+                        <outlet property="ethAddressOutlet" destination="CYM-j6-0go" id="CYd-AV-WfH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
