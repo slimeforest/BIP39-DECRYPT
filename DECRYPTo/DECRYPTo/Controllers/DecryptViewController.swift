@@ -59,8 +59,8 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     
     func checkCharacterCount(_ field: UITextField) {
         if field.text?.count == 4 {
-           let foundWord = checkWord(field.text!)
-    
+            let foundWord = checkWord(field.text!)
+            
             mainWordLabelOutlet.text = foundWord
         }else {
             print("current text else case: \(field.text!)")
@@ -83,28 +83,34 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     
     // Add Next Button To Keyboard
     func toolBar() -> UIToolbar{
-            let toolBar = UIToolbar()
-            toolBar.barStyle = .default
-            toolBar.isTranslucent = true
-            toolBar.barTintColor = UIColor.init(red: 0/255, green: 25/255, blue: 61/255, alpha: 1)
-            let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-            var buttonTitle = "Next"
-            let doneButton = UIBarButtonItem(title: buttonTitle, style: .done, target: self, action: #selector(onClickDoneButton))
-            doneButton.tintColor = .white
-            toolBar.setItems([space, space, doneButton], animated: false)
-            toolBar.isUserInteractionEnabled = true
-            toolBar.sizeToFit()
-            return toolBar
-        }
-
-        @objc func onClickDoneButton(){
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        var buttonTitle = "Next"
+        let doneButton = UIBarButtonItem(title: buttonTitle, style: .done, target: self, action: #selector(onClickDoneButton))
+        toolBar.setItems([space, space, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        toolBar.sizeToFit()
+        return toolBar
+    }
+    
+    @objc func onClickDoneButton(){
             if userPhrase.count <= 23 {
-                userPhrase.append(mainWordLabelOutlet.text!)
-                var completePhraseString: String = ""
+                let word = mainWordLabelOutlet.text!
+                
+                if word == "Not Found" || word == "Enter code" {
+                    presentInvalidEntryAlert(type: word)
+                }else {
+                    userPhrase.append(mainWordLabelOutlet.text!)
+                }
+                
+                var completePhrase: String = ""
+                
                 for word in userPhrase {
-                    completePhraseString += " \(word)"
-                    print(completePhraseString)
-                    fullStringLabelOutlet.text = completePhraseString
+                    completePhrase += " \(word)"
+                    print(completePhrase)
+                    fullStringLabelOutlet.text = completePhrase
                     numberEntryField.text = ""
                 }
             }else {
@@ -112,19 +118,27 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
             }
         }
     
+    
     //MARK: - Alert Handling
     
     func presentCharacerLimitAlert() {
         let alert = UIAlertController(title: "24 Word Limit Reached", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
-
+        
         self.present(alert, animated: true, completion: nil)
     }
     
     func presentCopyAlert() {
         let alert = UIAlertController(title: "Copied!", message: "Your full recovery phrase has been copied to your clipboard.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
-
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func presentInvalidEntryAlert(type: String) {
+        let alert = UIAlertController(title: "Error", message: "'\(type)' is not a valid entry.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+        
         self.present(alert, animated: true, completion: nil)
     }
 }
