@@ -20,19 +20,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC0-Sx-LsT">
                                 <rect key="frame" x="10" y="131" width="370" height="139.66666666666663"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="BIP39">
+                                    <fragment content="BIP39 DECRYPTION">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.089820435680000005" blue="0.10038259319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="60" name="TrebuchetMS-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" DECRYPTION">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.089820435680000005" blue="0.10038259319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="60" name="TrebuchetMS-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            <integer key="NSUnderline" value="1"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -61,7 +53,7 @@
                                             <segue destination="S1r-GV-69p" kind="show" identifier="mainToWordList" id="o8V-AK-STL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NT-qM-eSn">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NT-qM-eSn">
                                         <rect key="frame" x="57" y="137" width="256" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="MOR-QJ-UOK"/>
@@ -260,7 +252,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNE-ZK-e6K" userLabel="Full String Label">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="61"/>
-                                        <string key="text">Begin by entering your BIP39 codes and clicking "next" to temporarily save the translation here. Clears on app close or delete button.</string>
+                                        <string key="text">Begin by entering your BIP39 codes and clicking 'next' to temporarily save the conversion here. Deletes on app termination or delete button.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

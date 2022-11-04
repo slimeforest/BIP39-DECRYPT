@@ -16,17 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var adaAddressOutlet: UILabel!
     @IBOutlet weak var dogeAddressOutlet: UILabel!
     
-    
-//    mokoto glitch
-//    == mokotoglitch
-//    mokoto glitch mark II
-//    == mokotoglitchmarkII
-//
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        decryptoLabelOutlet.font = UIFont(name: "mokotoglitchmarkII", size: 48)
     }
     
     // address buttons pressed

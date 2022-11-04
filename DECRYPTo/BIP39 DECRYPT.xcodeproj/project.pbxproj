@@ -10,8 +10,6 @@
 		C303850329132E57008BF4F5 /* DecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303850229132E57008BF4F5 /* DecryptViewController.swift */; };
 		C3038505291333CB008BF4F5 /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038504291333CB008BF4F5 /* WordListViewController.swift */; };
 		C303850729133724008BF4F5 /* bipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303850629133724008BF4F5 /* bipCell.swift */; };
-		C303850F2914B031008BF4F5 /* mokotoglitchmarkII.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C303850D2914B028008BF4F5 /* mokotoglitchmarkII.ttf */; };
-		C30385122914B150008BF4F5 /* mokotoglitch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C30385112914B150008BF4F5 /* mokotoglitch.ttf */; };
 		C3956DC8291234BE00B31A54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3956DC7291234BE00B31A54 /* AppDelegate.swift */; };
 		C3956DCA291234BE00B31A54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3956DC9291234BE00B31A54 /* SceneDelegate.swift */; };
 		C3956DCC291234BE00B31A54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3956DCB291234BE00B31A54 /* ViewController.swift */; };
@@ -25,8 +23,6 @@
 		C303850229132E57008BF4F5 /* DecryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptViewController.swift; sourceTree = "<group>"; };
 		C3038504291333CB008BF4F5 /* WordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
 		C303850629133724008BF4F5 /* bipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bipCell.swift; sourceTree = "<group>"; };
-		C303850D2914B028008BF4F5 /* mokotoglitchmarkII.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mokotoglitchmarkII.ttf; sourceTree = "<group>"; };
-		C30385112914B150008BF4F5 /* mokotoglitch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mokotoglitch.ttf; sourceTree = "<group>"; };
 		C3956DC4291234BE00B31A54 /* BIP39 DECRYPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BIP39 DECRYPT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3956DC7291234BE00B31A54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3956DC9291234BE00B31A54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,8 +99,6 @@
 				C3956DD0291234C100B31A54 /* Assets.xcassets */,
 				C3956DD2291234C100B31A54 /* LaunchScreen.storyboard */,
 				C3956DD5291234C100B31A54 /* Info.plist */,
-				C303850D2914B028008BF4F5 /* mokotoglitchmarkII.ttf */,
-				C30385112914B150008BF4F5 /* mokotoglitch.ttf */,
 			);
 			path = DECRYPTo;
 			sourceTree = "<group>";
@@ -170,8 +164,6 @@
 				C3956DD4291234C100B31A54 /* LaunchScreen.storyboard in Resources */,
 				C3956DD1291234C100B31A54 /* Assets.xcassets in Resources */,
 				C3956DCF291234BE00B31A54 /* Main.storyboard in Resources */,
-				C30385122914B150008BF4F5 /* mokotoglitch.ttf in Resources */,
-				C303850F2914B031008BF4F5 /* mokotoglitchmarkII.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

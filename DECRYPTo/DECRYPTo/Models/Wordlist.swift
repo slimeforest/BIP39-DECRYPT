@@ -1,6 +1,5 @@
 import Foundation
 class Wordlist {
-   
     let wordlistArray = [
         "abandon",
         "ability",

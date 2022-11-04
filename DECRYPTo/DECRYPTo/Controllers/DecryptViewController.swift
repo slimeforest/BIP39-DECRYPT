@@ -19,8 +19,9 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     
     let list = Wordlist()
     var userPhrase = [String]()
+    var phraseToCopy = ""
     
-    let defaultTextCheck = "Begin by entering your BIP39 codes and clicking 'next' to temporarily save the conversion here. Deletes on app close or delete button."
+    let defaultTextCheck = "Begin by entering your BIP39 codes and clicking 'next' to temporarily save the conversion here. Deletes on app termination or delete button."
     
     override func viewDidLoad() {
         numberEntryField.delegate = self
@@ -36,19 +37,18 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     
     @IBAction func copyButtonPressed(_ sender: Any) {
         
-        if fullStringLabelOutlet.text == defaultTextCheck {
-            presentInvalidEntryAlert(type: "Special")
-        }else {
-            UIPasteboard.general.string = fullStringLabelOutlet.text
-            presentCopyAlert()
-        }
+        phraseToCopy = fullStringLabelOutlet.text!
+        phraseToCopy.remove(at: phraseToCopy.startIndex)
         
         
+        UIPasteboard.general.string = phraseToCopy
+        presentCopyAlert()
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
         userPhrase = []
-        fullStringLabelOutlet.text = "Begin by entering your BIP39 codes and clicking 'next' to temporarily save the conversion here. Deletes on app close or delete button."
+        fullStringLabelOutlet.text = defaultTextCheck
+        mainWordLabelOutlet.text = "Enter code"
     }
     
     //MARK: - Textfield Handling
@@ -79,11 +79,6 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     func checkWord(_ number: String) -> String {
         let fourDigitNumber = Int(number)
         
-        
-        
-        
-        print("Int: \(fourDigitNumber ?? 9999)")
-        
         if let word = list.wordlistDict[fourDigitNumber!] {
             print(word)
             return word
@@ -109,27 +104,27 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     }
     
     @objc func onClickDoneButton(){
-            if userPhrase.count <= 23 {
-                let word = mainWordLabelOutlet.text!
-                
-                if word == "Not Found" || word == "Enter code" {
-                    presentInvalidEntryAlert(type: word)
-                }else {
-                    userPhrase.append(mainWordLabelOutlet.text!)
-                }
-                
-                var completePhrase: String = ""
-                
-                for word in userPhrase {
-                    completePhrase += " \(word)"
-                    print(completePhrase)
-                    fullStringLabelOutlet.text = completePhrase
-                    numberEntryField.text = ""
-                }
+        if userPhrase.count <= 23 {
+            let word = mainWordLabelOutlet.text!
+            
+            if word == "Not Found" || word == "Enter code" {
+                presentInvalidEntryAlert(type: word)
             }else {
-                presentCharacerLimitAlert()
+                userPhrase.append(mainWordLabelOutlet.text!)
             }
+            
+            var completePhrase: String = ""
+            
+            for word in userPhrase {
+                completePhrase += " \(word)"
+                print(completePhrase)
+                fullStringLabelOutlet.text = completePhrase
+                numberEntryField.text = ""
+            }
+        }else {
+            presentCharacerLimitAlert()
         }
+    }
     
     
     //MARK: - Alert Handling
@@ -153,7 +148,7 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
             let alert = UIAlertController(title: "Error", message: "'\(type)' is not a valid entry.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-        }else {
+        }else if type == defaultTextCheck {
             let alert = UIAlertController(title: "Error", message: "Please enter a BIP39 code.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
