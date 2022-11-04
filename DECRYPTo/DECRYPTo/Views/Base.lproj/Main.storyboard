@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC0-Sx-LsT">
                                 <rect key="frame" x="10" y="131" width="370" height="139.66666666666663"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="BIP39 DECRYPTION">
+                                    <fragment content="BIP39 DECRYPT">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.089820435680000005" blue="0.10038259319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="60" name="TrebuchetMS-Bold"/>
