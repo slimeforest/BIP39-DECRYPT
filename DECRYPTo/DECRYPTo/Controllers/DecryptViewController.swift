@@ -20,6 +20,8 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     let list = Wordlist()
     var userPhrase = [String]()
     
+    let defaultTextCheck = "Begin by entering your BIP39 codes and clicking 'next' to temporarily save the conversion here. Deletes on app close or delete button."
+    
     override func viewDidLoad() {
         numberEntryField.delegate = self
         deleteButtonOutlet.tintColor = .red
@@ -33,8 +35,15 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     //MARK: - Copy and Delete Buttons
     
     @IBAction func copyButtonPressed(_ sender: Any) {
-        UIPasteboard.general.string = fullStringLabelOutlet.text
-        presentCopyAlert()
+        
+        if fullStringLabelOutlet.text == defaultTextCheck {
+            presentInvalidEntryAlert(type: "Special")
+        }else {
+            UIPasteboard.general.string = fullStringLabelOutlet.text
+            presentCopyAlert()
+        }
+        
+        
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
@@ -140,9 +149,14 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     }
     
     func presentInvalidEntryAlert(type: String) {
-        let alert = UIAlertController(title: "Error", message: "'\(type)' is not a valid entry.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
+        if type == "Enter code" || type == "Not Found" {
+            let alert = UIAlertController(title: "Error", message: "'\(type)' is not a valid entry.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else {
+            let alert = UIAlertController(title: "Error", message: "Please enter a BIP39 code.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

@@ -12,18 +12,25 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DECRYPTO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BIP39_DECRYPT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC0-Sx-LsT">
-                                <rect key="frame" x="10" y="131" width="370" height="76.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC0-Sx-LsT">
+                                <rect key="frame" x="10" y="131" width="370" height="139.66666666666663"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="DECRYPTO">
+                                    <fragment content="BIP39">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.089820435680000005" blue="0.10038259319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="66" name="TrebuchetMS-Bold"/>
+                                            <font key="NSFont" size="60" name="TrebuchetMS-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" DECRYPTION">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.089820435680000005" blue="0.10038259319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="60" name="TrebuchetMS-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             <integer key="NSUnderline" value="1"/>
                                         </attributes>
@@ -32,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="cyh-So-WSB" userLabel="Buttons">
-                                <rect key="frame" x="10" y="292.66666666666669" width="370" height="201"/>
+                                <rect key="frame" x="10" y="355.66666666666669" width="370" height="201.00000000000006"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciR-nb-AbH">
                                         <rect key="frame" x="57" y="0.0" width="256" height="64"/>
@@ -226,7 +233,7 @@
         <!--Decrypt View Controller-->
         <scene sceneID="Zhp-fF-x6g">
             <objects>
-                <viewController id="RW0-qW-pKP" customClass="DecryptViewController" customModule="DECRYPTO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RW0-qW-pKP" customClass="DecryptViewController" customModule="BIP39_DECRYPT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xLV-MA-gfN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,7 +318,7 @@
         <!--Word List View Controller-->
         <scene sceneID="M25-cg-5db">
             <objects>
-                <viewController id="S1r-GV-69p" customClass="WordListViewController" customModule="DECRYPTO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S1r-GV-69p" customClass="WordListViewController" customModule="BIP39_DECRYPT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Ng-s6-DDz">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,7 +328,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bipCellReuse" rowHeight="77" id="UjR-el-hXu" customClass="bipCell" customModule="DECRYPTO" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bipCellReuse" rowHeight="77" id="UjR-el-hXu" customClass="bipCell" customModule="BIP39_DECRYPT" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UjR-el-hXu" id="dsU-G7-dUj">
