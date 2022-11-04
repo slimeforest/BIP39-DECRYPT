@@ -18,23 +18,31 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     @IBOutlet weak var deleteButtonOutlet: UIButton!
     
     let list = Wordlist()
+    var userPhrase = [String]()
     
     override func viewDidLoad() {
-        print("Decrypt view controller successfully loaded")
         numberEntryField.delegate = self
-        
         deleteButtonOutlet.tintColor = .red
+        
+        numberEntryField.inputAccessoryView = toolBar()
+        numberEntryField.becomeFirstResponder()
+        
+        userPhrase = []
     }
     
-    //button actions
+    //MARK: - Copy and Delete Buttons
+    
     @IBAction func copyButtonPressed(_ sender: Any) {
-        print("copy button pressed")
+        UIPasteboard.general.string = fullStringLabelOutlet.text
+        presentCopyAlert()
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
-        print("delete button pressed")
+        userPhrase = []
+        fullStringLabelOutlet.text = "Begin by entering your BIP39 codes and clicking 'next' to temporarily save the conversion here. Deletes on app close or delete button."
     }
     
+    //MARK: - Textfield Handling
     
     // textfield character limit
     let characterlimit = 4
@@ -69,5 +77,54 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
         }else {
             return "Not Found"
         }
+    }
+    
+    //MARK: - Next Button
+    
+    // Add Next Button To Keyboard
+    func toolBar() -> UIToolbar{
+            let toolBar = UIToolbar()
+            toolBar.barStyle = .default
+            toolBar.isTranslucent = true
+            toolBar.barTintColor = UIColor.init(red: 0/255, green: 25/255, blue: 61/255, alpha: 1)
+            let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+            var buttonTitle = "Next"
+            let doneButton = UIBarButtonItem(title: buttonTitle, style: .done, target: self, action: #selector(onClickDoneButton))
+            doneButton.tintColor = .white
+            toolBar.setItems([space, space, doneButton], animated: false)
+            toolBar.isUserInteractionEnabled = true
+            toolBar.sizeToFit()
+            return toolBar
+        }
+
+        @objc func onClickDoneButton(){
+            if userPhrase.count <= 23 {
+                userPhrase.append(mainWordLabelOutlet.text!)
+                var completePhraseString: String = ""
+                for word in userPhrase {
+                    completePhraseString += " \(word)"
+                    print(completePhraseString)
+                    fullStringLabelOutlet.text = completePhraseString
+                    numberEntryField.text = ""
+                }
+            }else {
+                presentCharacerLimitAlert()
+            }
+        }
+    
+    //MARK: - Alert Handling
+    
+    func presentCharacerLimitAlert() {
+        let alert = UIAlertController(title: "24 Word Limit Reached", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func presentCopyAlert() {
+        let alert = UIAlertController(title: "Copied!", message: "Your full recovery phrase has been copied to your clipboard.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
     }
 }
