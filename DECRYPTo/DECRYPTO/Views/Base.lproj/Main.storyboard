@@ -25,6 +25,7 @@
                                             <color key="NSColor" red="1" green="0.089820435680000005" blue="0.10038259319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="66" name="TrebuchetMS-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -40,7 +41,15 @@
                                             <constraint firstAttribute="height" constant="64" id="EaR-Ha-Xd9"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="View Word List"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="View Word List">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="TrebuchetMS"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="S1r-GV-69p" kind="show" identifier="mainToWordList" id="o8V-AK-STL"/>
                                         </connections>
@@ -52,7 +61,15 @@
                                             <constraint firstAttribute="height" constant="64" id="yiN-nf-vY7"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Decrypt"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Decrypt">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="TrebuchetMS"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="RW0-qW-pKP" kind="show" identifier="mainToDecrypt" id="RXf-0C-eg4"/>
                                         </connections>
