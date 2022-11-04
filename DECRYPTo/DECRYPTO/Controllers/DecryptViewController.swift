@@ -91,7 +91,7 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        var buttonTitle = "Next"
+        let buttonTitle = "Next"
         let doneButton = UIBarButtonItem(title: buttonTitle, style: .done, target: self, action: #selector(onClickDoneButton))
         toolBar.setItems([space, space, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true

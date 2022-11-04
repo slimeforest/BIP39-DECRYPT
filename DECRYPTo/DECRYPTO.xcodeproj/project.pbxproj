@@ -10,6 +10,8 @@
 		C303850329132E57008BF4F5 /* DecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303850229132E57008BF4F5 /* DecryptViewController.swift */; };
 		C3038505291333CB008BF4F5 /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038504291333CB008BF4F5 /* WordListViewController.swift */; };
 		C303850729133724008BF4F5 /* bipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303850629133724008BF4F5 /* bipCell.swift */; };
+		C303850F2914B031008BF4F5 /* mokotoglitchmarkII.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C303850D2914B028008BF4F5 /* mokotoglitchmarkII.ttf */; };
+		C30385122914B150008BF4F5 /* mokotoglitch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C30385112914B150008BF4F5 /* mokotoglitch.ttf */; };
 		C3956DC8291234BE00B31A54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3956DC7291234BE00B31A54 /* AppDelegate.swift */; };
 		C3956DCA291234BE00B31A54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3956DC9291234BE00B31A54 /* SceneDelegate.swift */; };
 		C3956DCC291234BE00B31A54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3956DCB291234BE00B31A54 /* ViewController.swift */; };
@@ -23,7 +25,9 @@
 		C303850229132E57008BF4F5 /* DecryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptViewController.swift; sourceTree = "<group>"; };
 		C3038504291333CB008BF4F5 /* WordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
 		C303850629133724008BF4F5 /* bipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bipCell.swift; sourceTree = "<group>"; };
-		C3956DC4291234BE00B31A54 /* DECRYPTo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DECRYPTo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C303850D2914B028008BF4F5 /* mokotoglitchmarkII.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mokotoglitchmarkII.ttf; sourceTree = "<group>"; };
+		C30385112914B150008BF4F5 /* mokotoglitch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mokotoglitch.ttf; sourceTree = "<group>"; };
+		C3956DC4291234BE00B31A54 /* DECRYPTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DECRYPTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3956DC7291234BE00B31A54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3956DC9291234BE00B31A54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C3956DCB291234BE00B31A54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +79,7 @@
 		C3956DBB291234BE00B31A54 = {
 			isa = PBXGroup;
 			children = (
-				C3956DC6291234BE00B31A54 /* DECRYPTo */,
+				C3956DC6291234BE00B31A54 /* DECRYPTO */,
 				C3956DC5291234BE00B31A54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,12 +87,12 @@
 		C3956DC5291234BE00B31A54 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3956DC4291234BE00B31A54 /* DECRYPTo.app */,
+				C3956DC4291234BE00B31A54 /* DECRYPTO.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C3956DC6291234BE00B31A54 /* DECRYPTo */ = {
+		C3956DC6291234BE00B31A54 /* DECRYPTO */ = {
 			isa = PBXGroup;
 			children = (
 				C3956DC7291234BE00B31A54 /* AppDelegate.swift */,
@@ -99,16 +103,18 @@
 				C3956DD0291234C100B31A54 /* Assets.xcassets */,
 				C3956DD2291234C100B31A54 /* LaunchScreen.storyboard */,
 				C3956DD5291234C100B31A54 /* Info.plist */,
+				C303850D2914B028008BF4F5 /* mokotoglitchmarkII.ttf */,
+				C30385112914B150008BF4F5 /* mokotoglitch.ttf */,
 			);
-			path = DECRYPTo;
+			path = DECRYPTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C3956DC3291234BE00B31A54 /* DECRYPTo */ = {
+		C3956DC3291234BE00B31A54 /* DECRYPTO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3956DD8291234C100B31A54 /* Build configuration list for PBXNativeTarget "DECRYPTo" */;
+			buildConfigurationList = C3956DD8291234C100B31A54 /* Build configuration list for PBXNativeTarget "DECRYPTO" */;
 			buildPhases = (
 				C3956DC0291234BE00B31A54 /* Sources */,
 				C3956DC1291234BE00B31A54 /* Frameworks */,
@@ -118,9 +124,9 @@
 			);
 			dependencies = (
 			);
-			name = DECRYPTo;
+			name = DECRYPTO;
 			productName = DECRYPTo;
-			productReference = C3956DC4291234BE00B31A54 /* DECRYPTo.app */;
+			productReference = C3956DC4291234BE00B31A54 /* DECRYPTO.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +144,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C3956DBF291234BE00B31A54 /* Build configuration list for PBXProject "DECRYPTo" */;
+			buildConfigurationList = C3956DBF291234BE00B31A54 /* Build configuration list for PBXProject "DECRYPTO" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -151,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C3956DC3291234BE00B31A54 /* DECRYPTo */,
+				C3956DC3291234BE00B31A54 /* DECRYPTO */,
 			);
 		};
 /* End PBXProject section */
@@ -164,6 +170,8 @@
 				C3956DD4291234C100B31A54 /* LaunchScreen.storyboard in Resources */,
 				C3956DD1291234C100B31A54 /* Assets.xcassets in Resources */,
 				C3956DCF291234BE00B31A54 /* Main.storyboard in Resources */,
+				C30385122914B150008BF4F5 /* mokotoglitch.ttf in Resources */,
+				C303850F2914B031008BF4F5 /* mokotoglitchmarkII.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +338,7 @@
 				DEVELOPMENT_TEAM = QW5Q4DEJR2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DECRYPTo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -341,7 +350,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iSpimbi.DECRYPTo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iSpimbi.DECRYPTO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -359,6 +368,7 @@
 				DEVELOPMENT_TEAM = QW5Q4DEJR2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DECRYPTo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -370,7 +380,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iSpimbi.DECRYPTo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iSpimbi.DECRYPTO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -381,7 +391,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C3956DBF291234BE00B31A54 /* Build configuration list for PBXProject "DECRYPTo" */ = {
+		C3956DBF291234BE00B31A54 /* Build configuration list for PBXProject "DECRYPTO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3956DD6291234C100B31A54 /* Debug */,
@@ -390,7 +400,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3956DD8291234C100B31A54 /* Build configuration list for PBXNativeTarget "DECRYPTo" */ = {
+		C3956DD8291234C100B31A54 /* Build configuration list for PBXNativeTarget "DECRYPTO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3956DD9291234C100B31A54 /* Debug */,

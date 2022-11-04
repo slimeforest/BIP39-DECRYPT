@@ -12,42 +12,60 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DECRYPTo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DECRYPTO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC0-Sx-LsT">
-                                <rect key="frame" x="10" y="91" width="370" height="79.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC0-Sx-LsT">
+                                <rect key="frame" x="10" y="131" width="370" height="76.666666666666686"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="DECRYPTo">
+                                    <fragment content="DECRYPTO">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.089820435680000005" blue="0.10038259319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="68" name="SFProText-Semibold"/>
-                                            <font key="NSOriginalFont" size="68" name="SFProText-Semibold"/>
+                                            <font key="NSFont" size="66" name="TrebuchetMS-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            <integer key="NSUnderline" value="1"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ciR-nb-AbH">
-                                <rect key="frame" x="65.617886178952631" y="280" width="256" height="64.000000000000014"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="View Word List"/>
-                                <connections>
-                                    <segue destination="S1r-GV-69p" kind="show" identifier="mainToWordList" id="o8V-AK-STL"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="cyh-So-WSB" userLabel="Buttons">
+                                <rect key="frame" x="10" y="292.66666666666669" width="370" height="201"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciR-nb-AbH">
+                                        <rect key="frame" x="57" y="0.0" width="256" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="7at-V7-cQ0"/>
+                                            <constraint firstAttribute="height" constant="64" id="EaR-Ha-Xd9"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="View Word List"/>
+                                        <connections>
+                                            <segue destination="S1r-GV-69p" kind="show" identifier="mainToWordList" id="o8V-AK-STL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NT-qM-eSn">
+                                        <rect key="frame" x="57" y="137" width="256" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="MOR-QJ-UOK"/>
+                                            <constraint firstAttribute="height" constant="64" id="yiN-nf-vY7"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Decrypt"/>
+                                        <connections>
+                                            <segue destination="RW0-qW-pKP" kind="show" identifier="mainToDecrypt" id="RXf-0C-eg4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dAa-hK-hu6" userLabel="Address stack">
                                 <rect key="frame" x="10" y="624" width="370" height="181"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-va-1jT">
-                                        <rect key="frame" x="125.66666666666666" y="0.0" width="118.66666666666666" height="36"/>
+                                        <rect key="frame" x="122.33333333333334" y="0.0" width="125.33333333333334" height="36"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Enoying?">
+                                            <fragment content="Enjoying?">
                                                 <attributes>
                                                     <color key="NSColor" red="0.15357898213679316" green="0.7803921568627451" blue="0.21727661024015427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" metaFont="system" size="30"/>
@@ -159,24 +177,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="0NT-qM-eSn">
-                                <rect key="frame" x="67" y="411" width="256" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Decrypt"/>
-                                <connections>
-                                    <segue destination="RW0-qW-pKP" kind="show" identifier="mainToDecrypt" id="RXf-0C-eg4"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dAa-hK-hu6" secondAttribute="bottom" constant="5" id="230-jB-DdC"/>
+                            <constraint firstItem="cyh-So-WSB" firstAttribute="top" secondItem="QC0-Sx-LsT" secondAttribute="bottom" constant="85" id="45j-8N-nnV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dAa-hK-hu6" secondAttribute="trailing" constant="10" id="5Eg-XY-1wL"/>
+                            <constraint firstItem="cyh-So-WSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="76a-yF-q9R"/>
+                            <constraint firstItem="QC0-Sx-LsT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Mmi-14-FoN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cyh-So-WSB" secondAttribute="trailing" constant="10" id="Mo4-AP-Tux"/>
                             <constraint firstItem="QC0-Sx-LsT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="TL5-3g-rWe"/>
-                            <constraint firstItem="0NT-qM-eSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VE9-7t-FXB"/>
-                            <constraint firstItem="QC0-Sx-LsT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WnH-iH-Das"/>
+                            <constraint firstItem="QC0-Sx-LsT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" id="WnH-iH-Das"/>
                             <constraint firstItem="dAa-hK-hu6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="eHD-l8-nm2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QC0-Sx-LsT" secondAttribute="trailing" constant="10" id="u3D-Sj-1lE"/>
                         </constraints>
@@ -197,7 +209,7 @@
         <!--Decrypt View Controller-->
         <scene sceneID="Zhp-fF-x6g">
             <objects>
-                <viewController id="RW0-qW-pKP" customClass="DecryptViewController" customModule="DECRYPTo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RW0-qW-pKP" customClass="DecryptViewController" customModule="DECRYPTO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xLV-MA-gfN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,7 +294,7 @@
         <!--Word List View Controller-->
         <scene sceneID="M25-cg-5db">
             <objects>
-                <viewController id="S1r-GV-69p" customClass="WordListViewController" customModule="DECRYPTo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S1r-GV-69p" customClass="WordListViewController" customModule="DECRYPTO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Ng-s6-DDz">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,7 +304,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bipCellReuse" rowHeight="77" id="UjR-el-hXu" customClass="bipCell" customModule="DECRYPTo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bipCellReuse" rowHeight="77" id="UjR-el-hXu" customClass="bipCell" customModule="DECRYPTO" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UjR-el-hXu" id="dsU-G7-dUj">
