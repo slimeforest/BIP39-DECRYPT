@@ -69,6 +69,10 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     
     func checkWord(_ number: String) -> String {
         let fourDigitNumber = Int(number)
+        
+        
+        
+        
         print("Int: \(fourDigitNumber ?? 9999)")
         
         if let word = list.wordlistDict[fourDigitNumber!] {

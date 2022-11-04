@@ -43,11 +43,10 @@ class ViewController: UIViewController {
     
     // alert
     func presentAlert(btnPressed: String) {
-        let alert = UIAlertController(title: "Copied!", message: "\(btnPressed) address has been copied to the clipboard.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Copied!", message: "\(btnPressed) address has been copied to your clipboard.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
 
         self.present(alert, animated: true, completion: nil)
     }
-    
 }
 
