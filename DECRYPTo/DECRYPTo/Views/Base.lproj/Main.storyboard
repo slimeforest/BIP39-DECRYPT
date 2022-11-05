@@ -17,21 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QC0-Sx-LsT">
-                                <rect key="frame" x="10" y="131" width="370" height="139.66666666666663"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="BIP39 DECRYPT">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.089820435680000005" blue="0.10038259319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="60" name="TrebuchetMS-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="cyh-So-WSB" userLabel="Buttons">
-                                <rect key="frame" x="10" y="355.66666666666669" width="370" height="201.00000000000006"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" alignment="center" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="cyh-So-WSB" userLabel="Buttons">
+                                <rect key="frame" x="10" y="392" width="370" height="338"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciR-nb-AbH">
                                         <rect key="frame" x="57" y="0.0" width="256" height="64"/>
@@ -53,7 +40,7 @@
                                             <segue destination="S1r-GV-69p" kind="show" identifier="mainToWordList" id="o8V-AK-STL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NT-qM-eSn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NT-qM-eSn">
                                         <rect key="frame" x="57" y="137" width="256" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="MOR-QJ-UOK"/>
@@ -73,149 +60,57 @@
                                             <segue destination="RW0-qW-pKP" kind="show" identifier="mainToDecrypt" id="RXf-0C-eg4"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XME-cl-CrV">
+                                        <rect key="frame" x="57" y="274" width="256" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="M8P-Eb-N8b"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="cLZ-9J-lPx"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Encrypt">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="24" name="TrebuchetMS"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dAa-hK-hu6" userLabel="Address stack">
-                                <rect key="frame" x="10" y="624" width="370" height="181"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9V-va-1jT">
-                                        <rect key="frame" x="122.33333333333334" y="0.0" width="125.33333333333334" height="36"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Enjoying?">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.15357898213679316" green="0.7803921568627451" blue="0.21727661024015427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" metaFont="system" size="30"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XII-MP-CcC" userLabel="BTC stack">
-                                        <rect key="frame" x="3" y="40" width="364.33333333333331" height="28.666666666666671"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxd-jM-RND">
-                                                <rect key="frame" x="0.0" y="0.0" width="37" height="28.666666666666668"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" text="bc1pmm7htgzphh8e2n8j8ghrqhg5j66mc6z6kqupp7e5xnlpu8zp0v4qyhwn8w" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eD-NV-fmg">
-                                                <rect key="frame" x="52.000000000000014" y="0.0" width="253.33333333333337" height="28.666666666666668"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Y4-2j-qMi" userLabel="btc button">
-                                                <rect key="frame" x="320.33333333333331" y="0.0" width="44" height="28.666666666666668"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="doc.on.doc" catalog="system" buttonSize="mini"/>
-                                                <connections>
-                                                    <action selector="btcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l1m-5D-6Xw"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-C4-hYf" userLabel="ETH stack">
-                                        <rect key="frame" x="0.33333333333334281" y="72.666666666666629" width="369.33333333333326" height="28.666666666666671"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETH:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPr-Vf-Dpo">
-                                                <rect key="frame" x="0.0" y="0.0" width="37" height="28.666666666666668"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemPurpleColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" text="0xe6FDE716da7853cCa69696A4c9264AE0C0ac1574" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYM-j6-0go">
-                                                <rect key="frame" x="45" y="0.0" width="272.33333333333331" height="28.666666666666668"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQR-5W-tbc" userLabel="eth button">
-                                                <rect key="frame" x="325.33333333333337" y="0.0" width="44" height="28.666666666666668"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="doc.on.doc" catalog="system" buttonSize="mini"/>
-                                                <connections>
-                                                    <action selector="ethButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HtG-jq-PsB"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="qGf-RV-Rdn" userLabel="ADA stack">
-                                        <rect key="frame" x="2.3333333333333428" y="105.33333333333337" width="365.33333333333326" height="43"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADA:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqF-Og-anV">
-                                                <rect key="frame" x="0.0" y="0.0" width="38.333333333333336" height="43"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemCyanColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" text="addr1qxceekr0c2vnv3esdzzxaee4xk9fv2katnuclhfdz87sl84rkn6apwfxe2whv3wasec3hcqyf433h2t2ms7hves3gppqr4dzqc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-Wd-gEB">
-                                                <rect key="frame" x="55.333333333333343" y="0.0" width="249.00000000000003" height="43"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-yf-NBc" userLabel="ada button">
-                                                <rect key="frame" x="321.33333333333337" y="0.0" width="44" height="43"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="doc.on.doc" catalog="system" buttonSize="mini"/>
-                                                <connections>
-                                                    <action selector="adaButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wb2-1K-oZI"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mQg-6U-wse" userLabel="DOGE stack">
-                                        <rect key="frame" x="1.3333333333333428" y="152.33333333333337" width="367.66666666666663" height="28.666666666666657"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOGE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adm-6p-noT">
-                                                <rect key="frame" x="0.0" y="0.0" width="51.333333333333336" height="28.666666666666668"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemYellowColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" text="DJYhUxw4isHWuCQU3fKkgWwuSz2qfeBC8d" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tty-ZJ-fpy">
-                                                <rect key="frame" x="66.333333333333329" y="0.0" width="242.33333333333337" height="28.666666666666668"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdh-X3-0kT" userLabel="doge button">
-                                                <rect key="frame" x="323.66666666666669" y="0.0" width="44" height="28.666666666666668"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="doc.on.doc" catalog="system" buttonSize="mini"/>
-                                                <connections>
-                                                    <action selector="dogeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xc1-QQ-w4P"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="QC0-Sx-LsT">
+                                <rect key="frame" x="10" y="101" width="370" height="241"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="BIP39 DECRYPT">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.089820435680000005" blue="0.10038259319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="60" name="TrebuchetMS-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dAa-hK-hu6" secondAttribute="bottom" constant="5" id="230-jB-DdC"/>
-                            <constraint firstItem="cyh-So-WSB" firstAttribute="top" secondItem="QC0-Sx-LsT" secondAttribute="bottom" constant="85" id="45j-8N-nnV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dAa-hK-hu6" secondAttribute="trailing" constant="10" id="5Eg-XY-1wL"/>
-                            <constraint firstItem="cyh-So-WSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="76a-yF-q9R"/>
-                            <constraint firstItem="QC0-Sx-LsT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Mmi-14-FoN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cyh-So-WSB" secondAttribute="trailing" constant="10" id="Mo4-AP-Tux"/>
-                            <constraint firstItem="QC0-Sx-LsT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="TL5-3g-rWe"/>
-                            <constraint firstItem="QC0-Sx-LsT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" id="WnH-iH-Das"/>
-                            <constraint firstItem="dAa-hK-hu6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="eHD-l8-nm2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QC0-Sx-LsT" secondAttribute="trailing" constant="10" id="u3D-Sj-1lE"/>
+                            <constraint firstItem="QC0-Sx-LsT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MzT-WK-JQQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cyh-So-WSB" secondAttribute="trailing" constant="10" id="VX4-Fy-Vbw"/>
+                            <constraint firstItem="QC0-Sx-LsT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="aLe-Vf-YVJ"/>
+                            <constraint firstItem="cyh-So-WSB" firstAttribute="top" secondItem="QC0-Sx-LsT" secondAttribute="bottom" constant="50" id="eZ2-cN-OKw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QC0-Sx-LsT" secondAttribute="trailing" id="iAE-xq-wsy"/>
+                            <constraint firstItem="QC0-Sx-LsT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ikd-m4-X8x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cyh-So-WSB" secondAttribute="bottom" constant="80" id="nAb-2T-0u0"/>
+                            <constraint firstItem="cyh-So-WSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="wOK-rr-qs1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="POK-7B-rPK"/>
                     <connections>
-                        <outlet property="adaAddressOutlet" destination="bYy-Wd-gEB" id="gIi-TL-nd7"/>
-                        <outlet property="btcAddressOutlet" destination="4eD-NV-fmg" id="fqN-uz-nhu"/>
                         <outlet property="decryptoLabelOutlet" destination="QC0-Sx-LsT" id="gfc-eQ-CwI"/>
-                        <outlet property="dogeAddressOutlet" destination="tty-ZJ-fpy" id="tDe-Hz-hFx"/>
-                        <outlet property="ethAddressOutlet" destination="CYM-j6-0go" id="CYd-AV-WfH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -392,30 +287,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="doc.on.doc" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
