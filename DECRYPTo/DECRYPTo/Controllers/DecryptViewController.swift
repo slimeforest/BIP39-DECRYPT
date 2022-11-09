@@ -17,6 +17,8 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     @IBOutlet weak var copyButtonOutlet: UIButton!
     @IBOutlet weak var deleteButtonOutlet: UIButton!
     
+    let logicBrain = LogicBrain()
+    
     let list = Wordlist()
     var userPhrase = [String]()
     var phraseToCopy = ""
@@ -63,30 +65,16 @@ class DecryptViewController: ViewController, UITextFieldDelegate {
     
     // textfield updated
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        checkCharacterCount(textField)
-    }
-    
-    func checkCharacterCount(_ field: UITextField) {
-        if field.text?.count == 4 {
-            let foundWord = checkWord(field.text!)
-            
-            mainWordLabelOutlet.text = foundWord
-        }else {
-            print("current text else case: \(field.text!)")
-        }
-    }
-    
-    func checkWord(_ number: String) -> String {
-        let fourDigitNumber = Int(number)
+        let enteredWord = textField.text!
+        let decryptedWord = logicBrain.decrypt(enteredWord)
         
-        if let word = list.wordlistDict[fourDigitNumber!] {
-            print(word)
-            return word
+        if decryptedWord == "Not Found" {
+            mainWordLabelOutlet.text = "Not Found"
         }else {
-            return "Not Found"
+            mainWordLabelOutlet.text = decryptedWord
         }
     }
-    
+
     //MARK: - Next Button
     
     // Add Next Button To Keyboard

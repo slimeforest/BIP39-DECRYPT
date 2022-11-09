@@ -15,8 +15,16 @@ class LogicBrain {
     let tripleRange = 100...999
     
     //MARK: - Decrypt Word
+    
     func decrypt(_ word: String) -> String {
-        return ""
+        
+        if word.count == 4 {
+          return decryptWord(numToDecrypt: word)
+            
+        }else {
+            print("character counter under 4")
+            return "Not Found"
+        }
     }
     
     func encrypt(_ word: String) -> String {
@@ -29,8 +37,19 @@ class LogicBrain {
     }
     
     
+    //MARK: - Decrypt Word
+    func decryptWord(numToDecrypt: String) -> String {
+        let fourDigitNumber = Int(numToDecrypt)
+        
+        if let word = list.wordlistDict[fourDigitNumber!] {
+            return word
+        }else {
+            return "Not Found"
+        }
+    }
     
     //MARK: - Encrypt Word
+    
     func encryptWord(userWord: String, dict: [Int:String]) -> String{
         let word = findKeyForValue(value: userWord, dictionary: dict)
         
