@@ -78,6 +78,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="aK0-YN-huG" kind="show" id="6oz-ec-KLm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -117,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1066.1538461538462" y="3.5545023696682461"/>
         </scene>
-        <!--Decrypt View Controller-->
+        <!--Decrypt-->
         <scene sceneID="Zhp-fF-x6g">
             <objects>
-                <viewController id="RW0-qW-pKP" customClass="DecryptViewController" customModule="BIP39_DECRYPT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Decrypt" id="RW0-qW-pKP" customClass="DecryptViewController" customModule="BIP39_DECRYPT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xLV-MA-gfN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAh-e9-FH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233.8461538461538" y="-366.11374407582935"/>
+            <point key="canvasLocation" x="2131" y="4"/>
         </scene>
         <!--Word List View Controller-->
         <scene sceneID="M25-cg-5db">
@@ -265,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lF-5V-EA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233.8461538461538" y="298.57819905213267"/>
+            <point key="canvasLocation" x="2132" y="-665"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ig3-lP-bVO">
@@ -284,6 +287,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHb-Mh-mfk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.92307692307691" y="3.5545023696682461"/>
+        </scene>
+        <!--Encrypt-->
+        <scene sceneID="aNd-Q6-3Fs">
+            <objects>
+                <viewController title="Encrypt" id="aK0-YN-huG" customClass="EncryptViewController" customModule="BIP39_DECRYPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YmX-ah-IXM">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aOl-C6-SIu" userLabel="Quick Phrase Stack">
+                                <rect key="frame" x="10" y="91.000000000000014" width="370" height="137.33333333333337"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3L-1d-NG7">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="45.666666666666664"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdf-MU-3pJ" userLabel="Main Word">
+                                        <rect key="frame" x="0.0" y="53.666666666666664" width="370" height="83.666666666666686"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="70"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ExT-8H-83U" userLabel="Full Phrase Stack">
+                                <rect key="frame" x="10" y="238.33333333333334" width="370" height="103.33333333333334"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpE-CT-MYo" userLabel="Full String Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="61"/>
+                                        <string key="text">Begin by entering your BIP39 codes and clicking 'next' to temporarily save the conversion here. Deletes on app termination or delete button.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="211" translatesAutoresizingMaskIntoConstraints="NO" id="Jo3-nv-wYg" userLabel="Buttons">
+                                        <rect key="frame" x="0.0" y="68.999999999999972" width="370" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhw-6t-zT1">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Copy"/>
+                                                <connections>
+                                                    <action selector="copyButtonPressed:" destination="aK0-YN-huG" eventType="touchUpInside" id="bHp-FM-pdy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTc-fZ-knG">
+                                                <rect key="frame" x="290.66666666666669" y="0.0" width="79.333333333333314" height="34.333333333333336"/>
+                                                <color key="tintColor" red="1" green="0.089820435680000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Delete"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Delete"/>
+                                                <connections>
+                                                    <action selector="deleteButtonPressed:" destination="aK0-YN-huG" eventType="touchUpInside" id="AGK-Sw-pJP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CMa-C4-8Ha"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ExT-8H-83U" firstAttribute="leading" secondItem="CMa-C4-8Ha" secondAttribute="leading" constant="10" id="Gv7-mf-YA8"/>
+                            <constraint firstItem="aOl-C6-SIu" firstAttribute="leading" secondItem="CMa-C4-8Ha" secondAttribute="leading" constant="10" id="IG9-3c-Sxs"/>
+                            <constraint firstItem="aOl-C6-SIu" firstAttribute="top" secondItem="CMa-C4-8Ha" secondAttribute="top" id="O4a-vZ-vyI"/>
+                            <constraint firstAttribute="trailing" secondItem="ExT-8H-83U" secondAttribute="trailing" constant="10" id="QAF-XL-AYi"/>
+                            <constraint firstItem="CMa-C4-8Ha" firstAttribute="trailing" secondItem="aOl-C6-SIu" secondAttribute="trailing" constant="10" id="TWg-lA-fUu"/>
+                            <constraint firstItem="ExT-8H-83U" firstAttribute="top" secondItem="aOl-C6-SIu" secondAttribute="bottom" constant="10" id="cW2-Y9-NOK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cBf-bj-NVV"/>
+                    <connections>
+                        <outlet property="copyButtinOutlet" destination="yhw-6t-zT1" id="zes-un-Atn"/>
+                        <outlet property="deleteButtonOutlet" destination="KTc-fZ-knG" id="yUp-9a-d2e"/>
+                        <outlet property="fullStringLabelOutlet" destination="wpE-CT-MYo" id="GNM-BB-f7X"/>
+                        <outlet property="mainWordLabelOutlet" destination="wdf-MU-3pJ" id="rMc-dY-3n0"/>
+                        <outlet property="numberEntryField" destination="f3L-1d-NG7" id="PZ3-vi-5x4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDR-mv-cID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2168" y="740"/>
         </scene>
     </scenes>
     <resources>

@@ -10,6 +10,7 @@
 		C303850329132E57008BF4F5 /* DecryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303850229132E57008BF4F5 /* DecryptViewController.swift */; };
 		C3038505291333CB008BF4F5 /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038504291333CB008BF4F5 /* WordListViewController.swift */; };
 		C303850729133724008BF4F5 /* bipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303850629133724008BF4F5 /* bipCell.swift */; };
+		C394759F2916FD150050BDC3 /* EncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C394759E2916FD150050BDC3 /* EncryptViewController.swift */; };
 		C3956DC8291234BE00B31A54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3956DC7291234BE00B31A54 /* AppDelegate.swift */; };
 		C3956DCA291234BE00B31A54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3956DC9291234BE00B31A54 /* SceneDelegate.swift */; };
 		C3956DCC291234BE00B31A54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3956DCB291234BE00B31A54 /* ViewController.swift */; };
@@ -17,12 +18,14 @@
 		C3956DD1291234C100B31A54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3956DD0291234C100B31A54 /* Assets.xcassets */; };
 		C3956DD4291234C100B31A54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3956DD2291234C100B31A54 /* LaunchScreen.storyboard */; };
 		C3956DDC291234E600B31A54 /* Wordlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3956DDB291234E600B31A54 /* Wordlist.swift */; };
+		C3C20456291C35F500BD8026 /* LogicBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C20455291C35F500BD8026 /* LogicBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C303850229132E57008BF4F5 /* DecryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptViewController.swift; sourceTree = "<group>"; };
 		C3038504291333CB008BF4F5 /* WordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
 		C303850629133724008BF4F5 /* bipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bipCell.swift; sourceTree = "<group>"; };
+		C394759E2916FD150050BDC3 /* EncryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptViewController.swift; sourceTree = "<group>"; };
 		C3956DC4291234BE00B31A54 /* BIP39 DECRYPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BIP39 DECRYPT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3956DC7291234BE00B31A54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3956DC9291234BE00B31A54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		C3956DD3291234C100B31A54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3956DD5291234C100B31A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3956DDB291234E600B31A54 /* Wordlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordlist.swift; sourceTree = "<group>"; };
+		C3C20455291C35F500BD8026 /* LogicBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			children = (
 				C3956DCB291234BE00B31A54 /* ViewController.swift */,
 				C3038504291333CB008BF4F5 /* WordListViewController.swift */,
+				C394759E2916FD150050BDC3 /* EncryptViewController.swift */,
 				C303850229132E57008BF4F5 /* DecryptViewController.swift */,
 			);
 			path = Controllers;
@@ -59,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				C3956DDB291234E600B31A54 /* Wordlist.swift */,
+				C3C20455291C35F500BD8026 /* LogicBrain.swift */,
 				C303850629133724008BF4F5 /* bipCell.swift */,
 			);
 			path = Models;
@@ -176,9 +182,11 @@
 			files = (
 				C3956DCC291234BE00B31A54 /* ViewController.swift in Sources */,
 				C3956DDC291234E600B31A54 /* Wordlist.swift in Sources */,
+				C394759F2916FD150050BDC3 /* EncryptViewController.swift in Sources */,
 				C3038505291333CB008BF4F5 /* WordListViewController.swift in Sources */,
 				C303850729133724008BF4F5 /* bipCell.swift in Sources */,
 				C3956DC8291234BE00B31A54 /* AppDelegate.swift in Sources */,
+				C3C20456291C35F500BD8026 /* LogicBrain.swift in Sources */,
 				C3956DCA291234BE00B31A54 /* SceneDelegate.swift in Sources */,
 				C303850329132E57008BF4F5 /* DecryptViewController.swift in Sources */,
 			);
