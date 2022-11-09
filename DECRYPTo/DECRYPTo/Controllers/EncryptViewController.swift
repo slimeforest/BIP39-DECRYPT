@@ -33,6 +33,7 @@ class EncryptViewController: ViewController, UITextFieldDelegate {
         numberEntryField.becomeFirstResponder()
         
         userPhrase = []
+        self.title = "Encrypt"
     }
     
     //MARK: - Copy and Delete Buttons

@@ -18,6 +18,7 @@ class WordListViewController: ViewController, UITableViewDelegate, UITableViewDa
         WordListTableView.delegate = self
         WordListTableView.dataSource = self
         WordListTableView.allowsSelection = false
+        self.title = "Word List"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

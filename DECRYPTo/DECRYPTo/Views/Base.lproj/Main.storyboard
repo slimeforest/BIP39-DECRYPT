@@ -111,7 +111,13 @@
                             <constraint firstItem="cyh-So-WSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="wOK-rr-qs1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="POK-7B-rPK"/>
+                    <navigationItem key="navigationItem" id="POK-7B-rPK">
+                        <barButtonItem key="rightBarButtonItem" title="View Code" id="WmU-U6-Tc2">
+                            <connections>
+                                <action selector="viewCodePressed:" destination="BYZ-38-t0r" id="S2V-et-jNL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="decryptoLabelOutlet" destination="QC0-Sx-LsT" id="gfc-eQ-CwI"/>
                     </connections>
